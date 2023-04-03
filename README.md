@@ -48,7 +48,7 @@ docker run -d -p 8080:8080 <name_of_image>
 
 Additionally, pull and run the image from Docker remote registry using the following command
 
-```json
+```docker
 docker run -p 8080:8080 ehienabs/getdescription:v1
 ```
 
