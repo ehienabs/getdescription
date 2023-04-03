@@ -1,4 +1,4 @@
-module github.com/ehienabs/wikitest
+module github.com/ehienabs/getdescription
 
 go 1.13
 
