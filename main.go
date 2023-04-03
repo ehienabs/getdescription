@@ -42,6 +42,10 @@ func getDescription(w http.ResponseWriter, r *http.Request) {
 	name := query.Get("name")
 	lang := query.Get("lang")
 
+	// Set default lang to English if not specified
+	if lang == "" {
+		lang = "en"
+	}
 	// Check for name input
 	if name == "" {
 		http.Error(w, "Please provide a name.", http.StatusBadRequest)
@@ -115,6 +119,11 @@ func getShortDescription(name string, lang string) (string, error) {
 }
 
 func getWikipediaAPIURL(name string, lang string) string {
+
+	// Set default lang to English if not specified
+	if lang == "" {
+		lang = "en"
+	}
 	// Convert name capital first
 	name = strings.Title(strings.ToLower(name))
 
